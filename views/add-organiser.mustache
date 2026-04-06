@@ -1,0 +1,72 @@
+{{> head}}
+{{> header}}
+{{> navigation}}
+
+<main class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+
+      <h1 class="h3 mb-4">Add Organiser</h1>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form method="post" action="/organiser/add-organiser">
+
+            <!-- Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                class="form-control"
+                value="{{name}}"
+                required
+              >
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control"
+                value="{{email}}"
+                required
+              >
+              {{#errors.email}}
+                <div class="form-text text-danger">{{.}}</div>
+              {{/errors.email}}
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                class="form-control"
+                required
+              >
+              {{#errors.password}}
+                <div class="form-text text-danger">{{.}}</div>
+              {{/errors.password}}
+            </div>
+
+            <!-- Submit -->
+            <div class="d-flex justify-content-end mt-4">
+              <button type="submit" class="btn btn-primary">Add organiser</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{{> footer}}

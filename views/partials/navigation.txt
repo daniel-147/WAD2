@@ -1,0 +1,13 @@
+<nav class="nav">
+  <a href="/courses-page">Courses</a>
+  {{^isLoggedIn}}
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  {{/isLoggedIn}}
+  {{#isLoggedIn}}
+    <a href="/logout">Logout</a>
+  {{/isLoggedIn}}
+  {{#isOrganiser}}
+      <a href="/organiser/add-course" class="btn">Add Course</a>
+    {{/isOrganiser}}
+</nav>

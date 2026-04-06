@@ -1,0 +1,86 @@
+
+# Yoga Booking System
+
+A web application developed for the **Web Application Development 2** practical coursework.  
+The system allows users to browse yoga courses and classes, register and log in, make bookings, and enables organisers to manage courses, sessions, and users.
+
+---
+
+## Tech Stack
+
+- Node.js
+- Express
+- NeDB (nedb-promises)
+- Mustache (server-side rendering)
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd <repository-folder>
+```
+
+---
+
+### 2. Install Dependencies
+
+From the project root directory, run:
+
+```bash
+npm install
+```
+
+---
+
+### 3. Seed the Database
+
+Populate the database with demo users, courses, and sessions:
+
+```bash
+npm run seed
+```
+
+**Important notes:**
+- Ensure the application is **not running** before seeding.
+- The seed script wipes existing data and recreates a clean dataset.
+- If you encounter file permission issues on Windows, stop the app and re-run the seed command.
+
+---
+
+### 4. Run the Application Locally
+
+Start the application using:
+
+```bash
+node index.js
+```
+
+---
+
+### 5. Access the Application
+
+Open a browser and navigate to:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Demo Login Accounts
+
+The seed script creates the following test accounts:
+
+### Student User
+- Email: `fiona@student.local`
+- Password: `Password1!`
+
+### Organiser User
+- Email: `organiser@local`
+- Password: `Password1!`
+
+---

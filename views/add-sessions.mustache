@@ -1,0 +1,114 @@
+{{> head}}
+{{> header}}
+{{> navigation}}
+
+<main class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+
+      <h1 class="h3 mb-4">{{title}}</h1>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form method="post" action="{{formAction}}">
+            <input type="hidden" name="count" value="{{count}}">
+
+            {{#rows}}
+              <fieldset class="border rounded p-3 mb-4">
+                <legend class="float-none w-auto px-2 h6 mb-0">Session {{displayIndex}}</legend>
+
+                <input type="hidden" name="sessionId{{index}}" value="{{sessionId}}">
+
+                <!-- Start -->
+                <div class="row g-3 mt-0">
+                  <div class="col-12">
+                    <label class="form-label">Start</label>
+                    <div class="d-flex gap-2">
+                      <input class="form-control" name="startDay{{index}}" value="{{startDay}}" placeholder="DD" required>
+                      <input class="form-control" name="startMonth{{index}}" value="{{startMonth}}" placeholder="MM" required>
+                      <input class="form-control" name="startYear{{index}}" value="{{startYear}}" placeholder="YYYY" required>
+                      <input class="form-control" name="startHour{{index}}" value="{{startHour}}" placeholder="HH" required>
+                      <input class="form-control" name="startMinute{{index}}" value="{{startMinute}}" placeholder="MM" required>
+                    </div>
+                  </div>
+
+                  <!-- End -->
+                  <div class="col-12">
+                    <label class="form-label">End</label>
+                    <div class="d-flex gap-2">
+                      <input class="form-control" name="endDay{{index}}" value="{{endDay}}" placeholder="DD" required>
+                      <input class="form-control" name="endMonth{{index}}" value="{{endMonth}}" placeholder="MM" required>
+                      <input class="form-control" name="endYear{{index}}" value="{{endYear}}" placeholder="YYYY" required>
+                      <input class="form-control" name="endHour{{index}}" value="{{endHour}}" placeholder="HH" required>
+                      <input class="form-control" name="endMinute{{index}}" value="{{endMinute}}" placeholder="MM" required>
+                    </div>
+                  </div>
+
+                  <!-- Capacity -->
+                  <div class="col-12 col-md-4">
+                    <label class="form-label" for="capacity_{{index}}">Capacity</label>
+                    <input
+                      class="form-control"
+                      id="capacity_{{index}}"
+                      name="capacity{{index}}"
+                      type="number"
+                      min="0"
+                      value="{{capacity}}"
+                      required
+                    >
+                  </div>
+
+                  <!-- Price -->
+                  <div class="col-12 col-md-4">
+                    <label class="form-label" for="price_{{index}}">Price</label>
+                    <input
+                      class="form-control"
+                      id="price_{{index}}"
+                      name="price{{index}}"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="{{price}}"
+                      required
+                    >
+                  </div>
+
+                  <!-- Location -->
+                  <div class="col-12 col-md-4">
+                    <label class="form-label" for="location_{{index}}">Location</label>
+                    <input
+                      class="form-control"
+                      id="location_{{index}}"
+                      name="location{{index}}"
+                      value="{{location}}"
+                      required
+                    >
+                  </div>
+
+                  <!-- Description -->
+                  <div class="col-12">
+                    <label class="form-label" for="description_{{index}}">Description</label>
+                    <input
+                      class="form-control"
+                      id="description_{{index}}"
+                      name="description{{index}}"
+                      value="{{description}}"
+                      required
+                    >
+                  </div>
+                </div>
+              </fieldset>
+            {{/rows}}
+
+            <div class="d-flex justify-content-end mt-3">
+              <button type="submit" class="btn btn-primary">Save Sessions</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{{> footer}}

@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
+  <div class="container">
+    <div class="navbar-nav me-auto">
+    <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/courses-page">Courses</a>
+    </div>
+
+    <div class="navbar-nav ms-auto align-items-center">
+      {{^isLoggedIn}}
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/register">Register</a>
+      {{/isLoggedIn}}
+
+      {{#isLoggedIn}}
+        <a class="nav-link" href="/logout">Logout</a>
+      {{/isLoggedIn}}
+
+      {{#isOrganiser}}
+        <a href="/organiser/add-course" class="btn btn-sm btn-primary ms-2">
+          Add Course
+        </a>
+        <a href="/organiser/add-organiser" class="btn btn-sm btn-primary ms-2">
+          Add Organisers
+        </a>
+        <a href="/organiser/users" class="btn btn-sm btn-primary ms-2">
+          Edit Users
+        </a>
+      {{/isOrganiser}}
+    </div>
+  </div>
+</nav>

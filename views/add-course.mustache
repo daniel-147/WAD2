@@ -1,0 +1,225 @@
+{{> head}}
+{{> header}}
+{{> navigation}}
+
+<main class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+
+      <h1 class="h3 mb-4">
+        {{#isUpdate}}Update Course{{/isUpdate}}
+        {{^isUpdate}}Add Course{{/isUpdate}}
+      </h1>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form
+            method="post"
+            action="{{#isUpdate}}/organiser/update-course/{{courseId}}{{/isUpdate}}{{^isUpdate}}/organiser/add-course{{/isUpdate}}"
+          >
+            {{#isUpdate}}
+              <input type="hidden" name="courseId" value="{{courseId}}">
+            {{/isUpdate}}
+
+            <!-- Title -->
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input
+                id="title"
+                name="title"
+                type="text"
+                class="form-control"
+                value="{{titleValue}}"
+                required
+              >
+            </div>
+
+            <!-- Duration -->
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="durationNumber" class="form-label">Duration</label>
+                <input
+                  id="durationNumber"
+                  name="durationNumber"
+                  type="number"
+                  min="1"
+                  class="form-control"
+                  value="{{durationNumberValue}}"
+                  required
+                >
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="durationUnit" class="form-label">Duration Unit</label>
+                <select
+                  id="durationUnit"
+                  name="durationUnit"
+                  class="form-select"
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="days" {{#durationUnit_days}}selected{{/durationUnit_days}}>days</option>
+                  <option value="weeks" {{#durationUnit_weeks}}selected{{/durationUnit_weeks}}>weeks</option>
+                  <option value="months" {{#durationUnit_months}}selected{{/durationUnit_months}}>months</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Level + Type -->
+            <div class="row g-3 mt-0">
+              <div class="col-12 col-md-6">
+                <label for="level" class="form-label">Level</label>
+                <select
+                  id="level"
+                  name="level"
+                  class="form-select"
+                  required
+                >
+                  <option value="beginner" {{#level_beginner}}selected{{/level_beginner}}>beginner</option>
+                  <option value="intermediate" {{#level_intermediate}}selected{{/level_intermediate}}>intermediate</option>
+                  <option value="advanced" {{#level_advanced}}selected{{/level_advanced}}>advanced</option>
+                </select>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="type" class="form-label">Type</label>
+                <select
+                  id="type"
+                  name="type"
+                  class="form-select"
+                  required
+                >
+                  <option value="weekend" {{#type_weekend}}selected{{/type_weekend}}>weekend</option>
+                  <option value="weekly" {{#type_weekly}}selected{{/type_weekly}}>weekly</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Drop-ins -->
+            <div class="mt-3">
+              <label class="form-label d-block">Drop-ins?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="allowDropInYes"
+                    name="allowDropIn"
+                    value="yes"
+                    {{#allowDropInYes}}checked{{/allowDropInYes}}
+                  >
+                  <label class="form-check-label" for="allowDropInYes">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    id="allowDropInNo"
+                    name="allowDropIn"
+                    value="no"
+                    {{#allowDropInNo}}checked{{/allowDropInNo}}
+                  >
+                  <label class="form-check-label" for="allowDropInNo">No</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Start + End Dates -->
+            <div class="row g-3 mt-0">
+              <div class="col-12 col-md-6">
+                <label class="form-label">Start Date</label>
+                <div class="d-flex gap-2">
+                  <input
+                    name="startDay"
+                    placeholder="DD"
+                    class="form-control"
+                    value="{{startDayValue}}"
+                    required
+                  >
+                  <input
+                    name="startMonth"
+                    placeholder="MM"
+                    class="form-control"
+                    value="{{startMonthValue}}"
+                    required
+                  >
+                  <input
+                    name="startYear"
+                    placeholder="YYYY"
+                    class="form-control"
+                    value="{{startYearValue}}"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label">End Date</label>
+                <div class="d-flex gap-2">
+                  <input
+                    name="endDay"
+                    placeholder="DD"
+                    class="form-control"
+                    value="{{endDayValue}}"
+                    required
+                  >
+                  <input
+                    name="endMonth"
+                    placeholder="MM"
+                    class="form-control"
+                    value="{{endMonthValue}}"
+                    required
+                  >
+                  <input
+                    name="endYear"
+                    placeholder="YYYY"
+                    class="form-control"
+                    value="{{endYearValue}}"
+                    required
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Number of Sessions -->
+            <div class="mt-3">
+              <label for="sessionCount" class="form-label">Number of Sessions</label>
+              <input
+                id="sessionCount"
+                name="sessionCount"
+                type="number"
+                min="1"
+                class="form-control"
+                value="{{sessionCountValue}}"
+                required
+              >
+            </div>
+
+            <!-- Description -->
+            <div class="mt-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                id="description"
+                name="description"
+                class="form-control"
+                rows="5"
+                required
+              >{{descriptionValue}}</textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="submit" class="btn btn-primary">
+                {{#isUpdate}}Update & Add Sessions{{/isUpdate}}
+                {{^isUpdate}}Add Sessions{{/isUpdate}}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{{> footer}}

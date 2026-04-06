@@ -1,0 +1,28 @@
+{{> head}}
+{{> header}}
+
+{{> navigation}}
+
+<main class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex align-items-start justify-content-between flex-wrap gap-2 mb-4">
+        <div>
+          <h1 class="h3 mb-1">All Courses</h1>
+          <p class="text-muted mb-0">Browse all available courses.</p>
+        </div>
+      </div>
+
+      {{> courses-list}}
+
+    </div>
+  </div>
+</main>
+
+<script>
+  setTimeout(() => {
+    document
+      .querySelectorAll(".auto-hide")
+      .forEach(el => el.style.display = "none");
+  }, 3000);
+</script>
