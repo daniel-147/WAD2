@@ -8,11 +8,12 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 // import authRoutes from "./routes/auth.js";
-import courseRoutes from "./routes/courses.js";
-import sessionRoutes from "./routes/sessions.js";
-import bookingRoutes from "./routes/bookings.js";
-import viewRoutes from "./routes/views.js";
+// import courseRoutes from "./routes/courses.js";
+// import sessionRoutes from "./routes/sessions.js";
+// import bookingRoutes from "./routes/bookings.js";
+// import viewRoutes from "./routes/views.js";
 // import { attachDemoUser } from "./middlewares/demoUser.js";
+import routes from "./routes/index.js";
 import { attachUser } from "./auth/auth.js"
 import { initDb } from "./models/_db.js";
 
@@ -53,12 +54,13 @@ app.get("/health", (req, res) => res.json({ ok: true }));
 
 // JSON API routes
 // app.use('/auth', authRoutes);
-app.use("/courses", courseRoutes);
-app.use("/sessions", sessionRoutes);
-app.use("/bookings", bookingRoutes);
+// app.use("/courses", courseRoutes);
+// app.use("/sessions", sessionRoutes);
+// app.use("/bookings", bookingRoutes);
 
-// SSR view routes
-app.use("/", viewRoutes);
+// // SSR view routes
+// app.use("/", viewRoutes);
+app.use(routes);
 
 // Errors
 export const not_found = (req, res) =>
