@@ -1,4 +1,3 @@
-
 # Yoga Booking System
 
 A web application developed for the **Web Application Development 2** practical coursework.  
@@ -33,6 +32,34 @@ From the project root directory, run:
 ```bash
 npm install
 ```
+
+---
+
+## Environment Variables
+
+This project uses environment variables for configuration.
+
+The `.env` file is **not included** in the repository to avoid committing secrets.
+
+### Local Development
+
+An example environment file is provided:
+
+```
+.env.example
+```
+
+To run the project locally, create your own `.env` file based on this example:
+
+```bash
+cp .env.example .env
+```
+
+Then update the values as needed (for example, setting a local `JWT_SECRET`).
+
+### Deployment
+
+In production (e.g. on Render), environment variables such as `NODE_ENV`, `PORT`, and `JWT_SECRET` are provided by the deployment platform and are **not stored in the repository**.
 
 ---
 

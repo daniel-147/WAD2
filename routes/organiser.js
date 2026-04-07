@@ -10,7 +10,8 @@ import {
   postUpdateSessions,
   viewSessionParticipants,
   addOrganiserPage,
-  postAddOrganiser
+  postAddOrganiser,
+  deleteCourse
 } from "../controllers/organiserController.js";
 
 const router = Router();
@@ -31,6 +32,11 @@ const requireOrganiser = (req, res, next) => {
 // Add course
 router.get("/organiser/add-course", requireOrganiser, addCoursePage);
 router.post("/organiser/add-course", requireOrganiser, postAddCourse);
+
+
+// Delete course
+router.post("/organiser/delete-course/:courseId", requireOrganiser, deleteCourse);
+
 
 // Add sessions
 router.get("/organiser/add-course/:courseId/sessions", requireOrganiser, addSessionsPage);
