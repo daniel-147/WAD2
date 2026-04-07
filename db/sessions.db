@@ -21,3 +21,5 @@
 {"courseId":"elI9ZW9iEVUYN4da","startDateTime":"2026-01-10T09:00:00.000Z","endDateTime":"2026-01-10T10:00:00.000Z","capacity":20,"bookedCount":1,"description":"Mindfulness session focusing on breath and grounding.","location":"Studio Room 1","price":15,"_id":"whJJ2ZXi8kKkmIB7"}
 {"courseId":"woOtXRanGJvfiBRo","startDateTime":"2026-03-16T18:30:00.000Z","endDateTime":"2026-03-16T19:45:00.000Z","capacity":18,"bookedCount":0,"description":"Vinyasa flow session with progressive sequencing.","location":"Studio Room 2","price":10,"_id":"xn2b1MsTDoPzcxF1"}
 {"$$indexCreated":{"fieldName":"courseId","unique":false,"sparse":false}}
+{"$$deleted":true,"_id":"3WwxLGJtZiWfovi3"}
+{"$$deleted":true,"_id":"2jno1Pec9aiHQxvx"}

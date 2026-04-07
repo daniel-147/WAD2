@@ -38,6 +38,18 @@
             <a class="btn btn-sm btn-outline-secondary" href="/organiser/update-course/{{id}}">
               Update Course
             </a>
+
+            
+            <form method="post"
+                action="/organiser/delete-course/{{id}}"
+                class="m-0"
+                onsubmit="return confirm('Are you sure you want to delete this course?');">
+                <button type="submit"
+                    class="btn btn-sm btn-outline-danger">
+                    Delete Course
+                </button>
+            </form>
+
           {{/isOrganiser}}
         </div>
       </div>

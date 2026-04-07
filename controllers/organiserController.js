@@ -488,3 +488,42 @@ export const postAddOrganiser = async (req, res) => {
 
   res.redirect("/organiser/users");
 };
+
+
+/* ============================
+   DELETE COURSE
+   ============================ */
+
+export const deleteCourse = async (req, res, next) => {
+  try {
+    const courseId = req.params.courseId;
+
+    const course = await CourseModel.findById(courseId);
+    if (!course) {
+      return res.status(404).render("error", {
+        title: "Not found",
+        message: "Course not found",
+        isLoggedIn: true,
+        isOrganiser: true,
+      });
+    }
+
+    // Find all sessions for this course
+    const sessions = await SessionModel.listByCourse(courseId);
+
+    for (const session of sessions) {
+      // Delete related bookings
+      await BookingModel.deleteBySession(session._id);
+      // Delete session
+      await SessionModel.delete(session._id);
+    }
+
+    // Delete the course itself
+    await CourseModel.delete(courseId);
+
+    res.redirect("/?deleted=1");
+  } catch (err) {
+    next(err);
+  }
+};
+
