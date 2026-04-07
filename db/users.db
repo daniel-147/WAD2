@@ -4,3 +4,6 @@
 {"name":"Ava","email":"ava@yoga.local","role":"organiser","_id":"rP3CktBUIOJALiAd"}
 {"name":"Dave","email":"dave@test.com","password":"$2b$10$Wfblsa9.fx3q6jcETegQluRbPHoaJeKNprVLKXKpLD6ZeQNSoxgLG","role":"user","_id":"sotr89zH9xPaMpuD"}
 {"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
+{"name":"Steve","email":"steve@test.com","password":"$2b$10$AtR.dkxzY/3LFzNXcJpSUuBSZ5P75Cl0gn4QRNzOijb/uLjlkqB/2","role":"user","_id":"sxokUVUu63p4Nj6U"}
+{"name":"Sally","email":"Sally@test.com","password":"$2b$10$CLHxh8L8jzkdi0MQsPgiG.goLwi/7fcD/jJ8f/nFCLdrMJMQ.4EF2","role":"organiser","_id":"Ll9GCDTJRylYUnBI"}
+{"$$deleted":true,"_id":"LHk73HgcZbVRU9AU"}
