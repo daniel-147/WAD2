@@ -4,4 +4,3 @@
 {"name":"Ava","email":"ava@yoga.local","role":"organiser","_id":"rP3CktBUIOJALiAd"}
 {"name":"Dave","email":"dave@test.com","password":"$2b$10$Wfblsa9.fx3q6jcETegQluRbPHoaJeKNprVLKXKpLD6ZeQNSoxgLG","role":"user","_id":"sotr89zH9xPaMpuD"}
 {"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
-{"$$indexCreated":{"fieldName":"email","unique":true}}

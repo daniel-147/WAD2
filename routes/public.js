@@ -7,6 +7,5 @@ const router = Router();
 router.get("/", homePage);
 router.get("/courses-page", coursesListPage);
 router.get("/courses-page/:id", courseDetailPage);
-// router.get("/bookings/:bookingId", bookingConfirmationPage);
 
 export default router;
