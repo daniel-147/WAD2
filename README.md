@@ -84,3 +84,17 @@ The seed script creates the following test accounts:
 - Password: `Password1!`
 
 ---
+
+## Features Implemented
+
+- Public browsing of courses and class details
+- User registration and login
+- Course enrolment and individual class booking
+- Role-based access control (user / organiser)
+- Organiser functionality:
+  - Add and update courses
+  - Add and update sessions
+  - View class participant lists
+  - Add and remove users and organisers
+
+---

@@ -1,5 +1,8 @@
 import { Router } from "express";
-import { postBookCourse, postBookSession } from "../controllers/viewsController.js";
+import {
+  postBookCourse,
+  postBookSession
+} from "../controllers/coursesController.js";
 
 const router = Router();
 

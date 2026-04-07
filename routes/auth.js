@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { loginPage, handleLogin, logout, registerPage, postRegister } from "../controllers/viewsController.js";
+import { loginPage, handleLogin, logout } from "../controllers/authController.js";
+import { registerPage, postRegister } from "../controllers/registerController.js";
 import { login as authLogin } from "../auth/auth.js";
 
 const router = Router();

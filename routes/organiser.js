@@ -10,8 +10,8 @@ import {
   postUpdateSessions,
   viewSessionParticipants,
   addOrganiserPage,
-  postAddOrganiser,
-} from "../controllers/viewsController.js";
+  postAddOrganiser
+} from "../controllers/organiserController.js";
 
 const router = Router();
 

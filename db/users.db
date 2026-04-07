@@ -1,6 +1,6 @@
-{"name":"Ava","email":"ava@yoga.local","role":"organiser","_id":"GykX0u2Vafj7uBRZ"}
-{"name":"Demo User","email":"organiser@local","role":"organiser","password":"$2b$10$YhkqdWqhXLP8IXOosvE.HebZFe4PnG3a4piIipOFLh4jpgpGffHny","_id":"TXuv7EZkCVXyEvma"}
-{"name":"Fiona","email":"fiona@student.local","role":"user","password":"$2b$10$ogy19FeKEozZJSj5U5/r3./oXhV.0BsmtxLiUezmnkUHO6mHq.B0O","_id":"h8NLmOHvZkCImyW0"}
-{"name":"Ben","email":"ben@yoga.local","role":"organiser","_id":"jSrT9oyxXPtNnzn0"}
+{"name":"Fiona","email":"fiona@student.local","role":"user","password":"$2b$10$qT4CRGmJ5qOsOIgt94RlCefwJCqdMcFwRemPrJaV0UAvNXZAfN8fm","_id":"44aVrFWbY5eI26MP"}
+{"name":"Demo User","email":"organiser@local","role":"organiser","password":"$2b$10$66GpTgEnJ2ZVq6IcBOFMpOuvNMTA6cOO4x5zjHaiR.s1y86UA/HjG","_id":"BghltySkCAV6xhpl"}
+{"name":"John","email":"john@test.com","password":"$2b$10$1GrxJ.wWqE32zHvfCEckh.WCvSBArlCaTXO4dFCRg/Sf0oM1U34Ha","role":"organiser","_id":"LHk73HgcZbVRU9AU"}
+{"name":"Ava","email":"ava@yoga.local","role":"organiser","_id":"rP3CktBUIOJALiAd"}
+{"name":"Dave","email":"dave@test.com","password":"$2b$10$Wfblsa9.fx3q6jcETegQluRbPHoaJeKNprVLKXKpLD6ZeQNSoxgLG","role":"user","_id":"sotr89zH9xPaMpuD"}
 {"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
-{"name":"Daniel","email":"daniel@test.com","password":"$2b$10$qdk6GsTDA9gvkpkRtyI4oeMWqMnzDZkgUaXvn5q5c3.vZWptP7UE6","role":"user","_id":"7auEoAZF9TCkvhE8"}

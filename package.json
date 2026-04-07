@@ -5,8 +5,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "seed": "node seed/seed.js",
-        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+        "seed": "node seed/seed.js"
     },
     "dependencies": {
         "bcrypt": "^6.0.0",
